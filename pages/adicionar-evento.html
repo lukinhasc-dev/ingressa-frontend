@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style-adicionar-evento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Ingressa</title>
+
+</head>
+
+<body>
+    <section class="nav-ingressa">
+        <header>
+            <div class="logo-ingressa">
+                <img src="/assets/img/ingressa-logo-transp.png" alt="Logotipo Ingressa">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="/pages/inicio.html">Início</a></li>
+                    <li><a href="/carrinho">Carrinho</a></li>
+                    <li><a href="/locais">Locais</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+
+                <form action="/buscar" method="GET">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="search" id="search" name="search" placeholder="Pesquisar eventos, shows..."
+                            required>
+                    </div>
+                </form>
+
+            </div>
+
+
+            <div class="profile-icon">
+                <a href="/perfil"> <!-- Ajustei o link para algo mais relevante -->
+                    <i class="fas fa-user"></i> <!-- Ícone do perfil -->
+                </a>
+            </div>
+        </header>
+    </section>
+
+    <section id="events-add">
+        <div class="tittle-text-events">
+            <h1>Cadastro de Evento</h1>
+            <p>Descreva todas as informações do evento aqui, como data, dia, local, etc. Participantes e até mesmos os
+                valores do seu evento.</p>
+        </div>
+
+        <form action="" method="post">
+            <div class="events-cadaster">
+                <div class="left-group">
+                    <div class="form-group">
+                        <label for="nome">Nome do Evento</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite o título do evento" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horario">Horário do Evento</label>
+                        <input type="time" id="horario" name="horario" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data">Data do Evento</label>
+                        <input type="date" id="data" name="data" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preco">Preço do Evento</label>
+                        <input type="number" id="preco" name="preco" placeholder="Digite o preço do ingresso" required>
+                    </div>
+                </div>
+
+                <div class="right-group">
+                    <div class="form-group">
+                        <label for="descricao">Descrição do Evento</label>
+                        <textarea id="descricao" name="descricao" placeholder="Escreva uma descrição sobre o evento"
+                            rows="4" required></textarea>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="tittle-text-events2">
+                <h2>Localização do Evento</h2>
+                <p>Informe o nome do local e detalhes importantes sobre acessibilidade e transporte para os
+                    participantes.
+                </p>
+            </div>
+
+            <div class="events-cadaster2">
+                <div class="left-group">
+                    <div class="form-group">
+                        <label for="endereco">Rua</label>
+                        <input type="text" id="endereco" name="endereco" placeholder="Digite a localização do evento"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade onde será o evento"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado</label>
+                        <input type="text" id="estado" name="estado" placeholder="Digite o estado do evento" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="numero">Número do Local</label>
+                        <input type="number" id="numero" name="numero" placeholder="Número do local do evento" required>
+                    </div>
+                </div>
+
+                <div class="right-group">
+                    <div class="form-group">
+                        <label for="foto">Banner ou Foto do Evento</label>
+                        <input type="file" id="foto" name="foto" accept="image/*" onchange="mostrarPreview(event)"
+                            required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tittle-text-events3">
+                <h3>Termos e Condições</h3>
+                <p>Leia atentamente os termos e condições antes de criar seu evento. Ao concordar, você aceita as regras
+                    e responsabilidades relacionadas à utilização da plataforma Ingressa para criação e gestão do seu
+                    evento.
+                </p>
+            </div>
+
+            <div class="terms-conditions">
+                <p><strong>Responsabilidade do Organizador:</strong> O criador do evento é o único responsável pela
+                    veracidade das informações do evento, incluindo nome, data, horário, preço, descrição, localização e
+                    conteúdo do evento. O organizador deve garantir que as informações fornecidas estejam corretas e
+                    atualizadas. O Ingressa não se responsabiliza pela execução, organização ou operação do evento em
+                    si,
+                    apenas pela disponibilização do evento na plataforma para a compra de ingressos.</p><br>
+
+                <p><strong>Conteúdo Inapropriado:</strong> O Ingressa não permite eventos que envolvam conteúdo ilegal,
+                    ofensivo, discriminatório, abusivo ou que infrinja os direitos de propriedade intelectual de
+                    terceiros.
+                    O organizador assume total responsabilidade por todo conteúdo publicado relacionado ao evento,
+                    incluindo
+                    imagens, vídeos, textos e informações adicionais.</p><br>
+
+                <p><strong>Alterações e Cancelamentos:</strong> O organizador do evento é responsável por informar o
+                    Ingressa com antecedência sobre quaisquer alterações significativas no evento (data, horário, local,
+                    preços, etc.) ou no caso de cancelamento. Em caso de cancelamento do evento, o organizador deverá
+                    seguir
+                    as diretrizes de reembolso de ingressos, conforme as políticas acordadas entre o organizador e o
+                    participante.</p><br>
+
+                <p><strong>Pagamentos, Comissões e Taxas:</strong> O Ingressa cobra uma comissão sobre as vendas de
+                    ingressos. O valor da comissão será especificado durante o processo de criação do evento. Os
+                    pagamentos
+                    aos organizadores serão realizados conforme os termos acordados, e o Ingressa não se responsabiliza
+                    por
+                    qualquer falha no pagamento ou qualquer outro problema financeiro relacionado ao evento.</p><br>
+
+                <p><strong>Segurança e Infraestrutura do Evento:</strong> O organizador é único responsável pela
+                    segurança e
+                    infraestrutura do evento. Isso inclui, mas não se limita a, controle de acesso, serviços de
+                    segurança,
+                    suporte médico, bilheteiros, equipamentos, limpeza e demais serviços necessários. O Ingressa não se
+                    envolve na execução ou organização logística do evento em si, limitando-se a oferecer a plataforma
+                    para
+                    a compra e venda de ingressos.</p><br>
+
+                <p><strong>Responsabilidade do Ingressa:</strong> O Ingressa é uma plataforma online para a criação,
+                    promoção e venda de ingressos para eventos. O Ingressa não assume qualquer responsabilidade sobre o
+                    evento em si, como organização, segurança, infraestrutura, ou qualquer outro aspecto relacionado à
+                    realização do evento. O Ingressa não se responsabiliza por falhas ou imprevistos que possam ocorrer
+                    durante o evento, como cancelamentos, problemas técnicos, logística, ou qualquer outro incidente.
+                </p><br>
+
+                <p><strong>Privacidade dos Dados:</strong> O Ingressa compromete-se a proteger os dados pessoais dos
+                    usuários de acordo com a Política de Privacidade. Os organizadores devem garantir que a coleta e o
+                    uso
+                    de dados de participantes do evento esteja de acordo com as leis de proteção de dados aplicáveis. O
+                    Ingressa não será responsável pelo uso inadequado dos dados dos participantes fora da plataforma.
+                </p><br>
+
+                <p><strong>Exclusão de Responsabilidade:</strong> O Ingressa se exime de qualquer responsabilidade por
+                    danos, perdas ou prejuízos que possam ocorrer durante o evento, seja diretamente ou indiretamente,
+                    relacionados à venda de ingressos ou à execução do evento. O criador do evento assume total
+                    responsabilidade por todos os aspectos do evento, incluindo a segurança, as condições de
+                    participação, a
+                    satisfação do público e a conformidade com as leis aplicáveis.</p><br>
+
+                <p><strong>Aceitação dos Termos:</strong> Ao criar um evento no Ingressa, o organizador declara que leu,
+                    compreendeu e concorda com todos os termos e condições acima, incluindo a isenção de
+                    responsabilidade do
+                    Ingressa com relação ao evento em si. O criador do evento também concorda em cumprir as regras e
+                    políticas estabelecidas pelo Ingressa durante o processo de criação, promoção e gestão dos
+                    ingressos.
+                </p><br>
+
+                <div class="checkbox-terms-conditions">
+                    <label>
+                        <input type="checkbox" name="termos" required>
+                        Eu li e aceito os termos e condições e a política de privacidade do Ingressa, incluindo a
+                        isenção de responsabilidade do Ingressa sobre a execução do evento.
+                    </label>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+</body>
+
+</html>
