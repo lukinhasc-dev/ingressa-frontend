@@ -1,43 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style-inicio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Ingressa</title>
 
 </head>
 
 <body>
-    <section>
-        <div class="logo-ingressa">
-            <img src="caminho/para/sua/imagem/logo.png" alt="Logotipo Ingressa">
-        </div>
-
+    <section class="nav-ingressa">
         <header>
+            <div class="logo-ingressa">
+                <img src="/assets/img/ingressa-logo-transp.png" alt="Logotipo Ingressa">
+            </div>
+
             <nav>
                 <ul>
-                    <li><a href="/">Início</a></li>
+                    <li><a href="/pages/inicio.html">Início</a></li>
                     <li><a href="/carrinho">Carrinho</a></li>
                     <li><a href="/locais">Locais</a></li>
                 </ul>
             </nav>
 
-            <form action="/buscar" method="GET">
-                <input type="search" id="search" name="search" placeholder="Pesquisar eventos, shows..." required>
-                <button type="submit" aria-label="Pesquisar">🔍</button>
-            </form>
+            <div class="header-actions">
+
+                <form action="/buscar" method="GET">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="search" id="search" name="search" placeholder="Pesquisar eventos, shows..." required>
+                    </div>
+                </form>
+
+            </div>
+
 
             <div class="profile-icon">
-                <a href="/conta">
-                    <img src="caminho/para/icone-de-perfil.png" alt="Perfil" class="icon-profile">
+                <a href="/perfil"> <!-- Ajustei o link para algo mais relevante -->
+                    <i class="fas fa-user"></i> <!-- Ícone do perfil -->
                 </a>
             </div>
+
         </header>
     </section>
+
+
+
+
+
+    <section id="shows-cards">
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
