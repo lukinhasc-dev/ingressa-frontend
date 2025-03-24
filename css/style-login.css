@@ -139,7 +139,18 @@ input:focus {
     margin-top: 0.80rem;
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .lado-esquerdo {
+        width: 60%;
+    }
+
+    img {
+        width: 3rem;
+        scale: 9;
+    }
+
+
+
     input[type="email"], input[type="password"] {
         width: 35rem;
         height: 5rem;
@@ -171,7 +182,32 @@ input:focus {
 
 
 
-@media (max-width: 1024px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .lado-esquerdo {
+        width: 60%;
+    }
+
+    img {
+        width: 3rem;
+        scale: 7;
+    }
     input[type="email"], input[type="password"] {
         width: 25rem;
         height: 4.5rem;
@@ -201,6 +237,27 @@ input:focus {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -259,6 +316,8 @@ input:focus {
     .login-text {
         font-size: 1rem;
         margin-top: 0.75rem;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     
     .forgot-password {
@@ -279,10 +338,33 @@ input:focus {
         border: 2px solid #C13B00;
     }
 
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 425px) {
@@ -337,6 +419,8 @@ input:focus {
     .login-text {
         font-size: 1rem;
         margin-top: 0.70rem;
+        margin-left: 15px;
+        margin-right: 15px;
     }
     
     .forgot-password {
