@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/css/style-login.css">
+    <link rel="stylesheet" href="/css/style-cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Login</title>
+    <title>Cadastro de Conta</title>
 
 </head>
 
@@ -30,30 +30,40 @@
             </div>
 
             <div class="forms-login"></div>
-            <form action="/login" method="POST">
+
+            <form action="/cadastro" method="POST">
+
+                <div class="input-nome">
+                    <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+                </div>
+
+                <div class="input-data-nascimento">
+                    <input type="date" id="data-nascimento" name="data-nascimento" required>
+                </div>
 
                 <div class="input-email">
-                    <i class="fas fa-envelope"></i> <!-- Ícone de envelope -->
                     <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
 
                 <div class="input-senha">
-                    <i class="fas fa-lock"></i> <!-- Ícone de cadeado -->
                     <input type="password" id="senha" name="senha" placeholder="Senha" required>
                 </div>
 
-                <div class="forgot-password">
-                    <div class="forgot-pass">
-                        <p>Esqueceu a senha? </p>
-                        <a href="/redefinir.html"> Redefinir senha</a>
-                    </div>
-
-                    <input type="submit" value="Entrar">
+                <div class="input-cpf">
+                    <input type="text" id="cpf" name="cpf" placeholder="CPF" required pattern="\d{11}"
+                        title="Insira um CPF válido com 11 dígitos">
                 </div>
 
+                <div class="input-telefone">
+                    <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required
+                        pattern="\(\d{2}\)\s\d{5}-\d{4}" title="Formato esperado: (XX) XXXXX-XXXX">
+                </div>
+
+                <input type="submit" value="Cadastrar">
+
                 <div class="create-account">
-                    <p>Não tem conta?</p>
-                    <a href="/pages/cadastro.html">Criar conta</a>
+                    <p>Já tem uma conta?</p>
+                    <a href="/pages/login.html">Fazer login</a>
                 </div>
             </form>
         </section>
