@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -273,6 +276,28 @@ input[type="checkbox"] {
   input[type="checkbox"]:checked {
     accent-color: #FF5722; /* Cor ao ser marcado */
     text-align: center;
+  }
+
+  .cad-events {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 4.5rem;
+  }
+
+  .cad-events input {
+    width: 35rem;
+    height: 4rem;
+    background-color: #F85F1C;  
+    border-radius: 15px;
+    border: none;
+  }
+
+  .cad-events input[type="submit"] {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: white;
   }
 
 
