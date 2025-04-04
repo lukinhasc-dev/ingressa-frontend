@@ -115,8 +115,8 @@ input[type="search"] {
     align-items: center;
     padding: 35px;
     border-radius: 10px;
-    width: 390px;
-    height: 565px;
+    width: 350px;
+    height: 630px;
     background-color: #e2e2e258;
 }
 
@@ -137,15 +137,16 @@ input[type="search"] {
 .description-card {
     color: black;
     font-size: 1rem;
+    margin-top: 0.25rem;
     font-weight: 400;
     text-align: justify;
 }
 
 .cards-information {
     display: flex;
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     align-items: end;
-    gap: 70px; 
+    gap: 50px; 
 }
 
 .cards-dayweek {
@@ -164,9 +165,16 @@ input[type="search"] {
     color: white;
     background-color: #F85F1C;
     border: none;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 200;
-    padding: 6px;
-    width: 120px;
+    padding: 5px;
+    width: 100px;
     border-radius: 20px;
+}
+
+/*CARDS JUNTOS, NÃO MEXER!*/
+.cards-junction {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
