@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style-perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Ingressa</title>
+
+</head>
+
+<body>
+    <section class="nav-ingressa">
+        <header>
+            <div class="logo-ingressa">
+                <img src="/assets/img/ingressa-logo-transp.png" alt="Logotipo Ingressa">
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="/pages/inicio.html">Início</a></li>
+                    <li><a href="/pages/adicionar-evento.html">Carrinho</a></li>
+                    <li><a href="/locais">Locais</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <form action="" method="GET">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="search" id="search" name="search" placeholder="Pesquisar eventos, shows..."
+                            required>
+                    </div>
+                </form>
+
+            </div>
+
+            <div class="profile-icon">
+                <a href="/pages/perfil.html"> <!-- Ajustei o link para algo mais relevante -->
+                    <i class="fas fa-user"></i> <!-- Ícone do perfil -->
+                </a>
+            </div>
+        </header>
+    </section>
+
+
+    <section id="perfil-description">
+        <div class="perfil-account">
+            <h1 class="tittle-inicio">Minha Conta</h1>
+            <p class="text-inicio">Acesse e gerencie suas informações, histórico de compras e preferências de eventos.
+                Tudo ao seu alcance!</p>
+        </div>
+    </section>
+
+    <section id="perfil-admin-account">
+
+        <section class="left">
+            <div class="perfil-left">
+                <div class="left-group">
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" disabled>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" disabled>
+                    </div>
+
+                    <button id="editarBtn">Editar Dados</button>
+
+
+                </div>
+
+                <div class="right-group">
+                    <div class="form-group">
+                        <label for="foto">Banner ou Foto do Evento</label>
+                        <input type="file" id="foto" name="foto" accept="image/*" onchange="mostrarPreview(event)">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+    <script src="/scripts/perfil.js"></script>
+</body>
