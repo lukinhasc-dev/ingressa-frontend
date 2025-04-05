@@ -125,27 +125,6 @@ input[type="search"] {
     background-color: #e2e2e258;
 }
 
-
-.cards-junction {
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #cards-content img {
     height: 320px;
     width: 320px;
@@ -174,12 +153,6 @@ input[type="search"] {
     align-items: end;
     position: relative;
     bottom: 1;
-
-
-
-
-
-
 }
 
 .cards-dayweek {
@@ -205,5 +178,3 @@ input[type="search"] {
     width: 100px;
     cursor: pointer;
 }
-
-/*CARDS JUNTOS, NÃO MEXER!*/

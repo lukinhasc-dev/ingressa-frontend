@@ -21,17 +21,16 @@
 
         <section class="lado-direito">
             <div class="tittle-description">
-                <h1 class="login-tittle">Faça seu Login</h1>
+                <h1 class="login-tittle">Criar conta</h1>
                 <p class="login-text">
-                    Acesse sua conta no Ingressa e adquira ingressos de forma rápida, prática e segura. Não perca
-                    tempo,
-                    garanta sua entrada para os melhores eventos e shows.
+                    Crie sua conta no Ingressa e tenha acesso rápido aos melhores eventos e shows. Cadastre-se de forma
+                    simples e segura para começar a comprar ingressos com facilidade e aproveitar promoções exclusivas.
                 </p>
             </div>
 
             <div class="forms-login"></div>
 
-            <form action="/cadastro" method="POST">
+            <form id="forms-cadastro">
 
                 <div class="input-nome">
                     <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
@@ -50,8 +49,8 @@
                 </div>
 
                 <div class="input-cpf">
-                    <input type="text" id="cpf" name="cpf" placeholder="CPF" required pattern="\d{11}"
-                        title="Insira um CPF válido com 11 dígitos">
+                    <input type="text" id="cpf" name="cpf" placeholder="CPF" required
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Insira um CPF no formato 000.000.000-00">
                 </div>
 
                 <div class="input-telefone">
@@ -69,8 +68,7 @@
         </section>
     </section>
 
-
-
+    <script src="/scripts/conta.js"></script>
 </body>
 
 </html>
