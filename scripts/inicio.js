@@ -10,11 +10,6 @@ eventosSalvos.forEach(evento => {
     card.classList.add('cards-junction');
 
     card.innerHTML = `
-      <section id="cards-content">
-        <div class="cards-image">
-          <img src="${evento.banner}" alt="Foto do Show">
-
-
          <section class="cards-junction">
             <section id="cards-content">
                 <div class="cards-image">
@@ -76,4 +71,5 @@ function formatarHorario(horarioString) {
         return `${hora}h${minuto}`;
     }
 }
+
 
