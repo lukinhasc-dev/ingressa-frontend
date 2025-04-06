@@ -112,9 +112,11 @@ input[type="search"] {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.1rem;
     margin-left: 136px;
     margin-right: 120px;
+    position: absolute;
+    flex-grow: 3;
 }
 
 #cards-content {
@@ -147,12 +149,13 @@ input[type="search"] {
     text-align: justify;
 }
 
-.cards-information {
+#cards .cards-information {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    position: relative;
-    bottom: 1;
+    position: fixed;
+    top: 850px;
+    gap: 80px;
 }
 
 .cards-dayweek {

@@ -1,6 +1,3 @@
-const formEvent = document.getElementById('events-forms');
-localStorage.removeItem('eventos');
-
 const inputPreco = document.getElementById('preco');
 
 inputPreco.addEventListener('input', (e) => {
@@ -27,6 +24,7 @@ inputPreco.addEventListener('input', (e) => {
     e.target.value = valorFormatado;
 });
 
+const formEvent = document.getElementById('events-forms'); // ou use um id se quiser mais precisão, tipo: document.getElementById('form-evento')
 
 formEvent.addEventListener('submit', function (e) {
   e.preventDefault();

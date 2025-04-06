@@ -59,6 +59,8 @@
         <section class="left">
             <div class="perfil-left">
                 <div class="left-group">
+                    <h2 class="title-perfil">Dados Pessoais</h2>
+
                     <div class="form-group">
                         <label for="nome">Nome</label>
                         <input type="text" id="nome" disabled>
@@ -80,16 +82,30 @@
                     </div>
 
                     <button id="editarBtn">Editar Dados</button>
-
-
                 </div>
+            </div>
+        </section>
 
-                <div class="right-group">
-                    <div class="form-group">
-                        <label for="foto">Banner ou Foto do Evento</label>
-                        <input type="file" id="foto" name="foto" accept="image/*" onchange="mostrarPreview(event)">
-                    </div>
-                </div>
+        <section class="right-group">
+            <div class="right-group1">
+                <h3 class="title-admin">Conta de Administrador</h3>
+                <p class="description-admin">
+                        Com uma conta de administrador, você terá acesso a uma área exclusiva para facilitar o gerenciamento dos seus eventos. Entre as funcionalidades disponíveis, é possível:
+                        <br><br>
+                        - Cadastrar e editar eventos com informações como local, data, horário e imagem de divulgação;<br>
+                        - Gerenciar ingressos, incluindo tipos, lotes, preços e vendas;<br>
+                        - Acompanhar relatórios de desempenho e perfil do público em tempo real;<br>
+                        - Exportar listas, enviar comunicados e resolver questões administrativas com agilidade;<br>
+                        - Usar ferramentas exclusivas para edição, visibilidade e integração com outras plataformas.
+                        <br><br>
+                        Se você é organizador ou tem permissão para administrar eventos, crie agora sua conta administrativa e tenha controle total das suas produções.
+                </p>
+
+                </p>
+            </div>
+            
+            <div class="create-admin">
+                <button id="criarAdmin">Criar conta</button>
             </div>
         </section>
     </section>

@@ -95,37 +95,35 @@ input[type="search"] {
 
 .tittle-inicio {
     color: #F85F1C;
+    font-size: 2rem;
 }
 
 .text-inicio {
     color: black;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 400;
 }
 
 /*ENCERRAMENTO DO TITULO E DESCRIÇÃO AQUI*/
 
-
-
-
-
-
-
 #perfil-admin-account {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 150px;
     margin-left: 130px;
     margin-right: 126px;
+    margin-top: 30px;
 }
 
 .perfil-left {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: start;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
 }
 
 .perfil-left input {
@@ -145,7 +143,6 @@ input[type="search"] {
 .perfil-left label {
     font-size: 1.3rem;
     margin-bottom: 5px;
-    margin-left: 10px;
 }
 
 .perfil-left textarea {
@@ -162,14 +159,8 @@ input[type="search"] {
     padding: 1rem;
 }
 
-.perfil-left {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 4rem;
-}
-
-#editarBtn {
+#editarBtn,
+#criarAdmin {
     width: 40rem;
     height: 3.7rem;
     border-radius: 20px;
@@ -179,5 +170,31 @@ input[type="search"] {
     font-size: 1.3rem;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 25px;
+}
+
+.title-perfil,
+.title-admin {
+    color: #F85F1C;
+    margin-bottom: 25px;
+    margin-top: 4rem;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.right-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 45px;
+    border-bottom: 2px solid #D9D9D9;
+}
+
+.description-admin {
+    font-size: 1.30rem;
+    text-align: justify;
+}
+
+.create-admin {
+    place-self: center;
 }
