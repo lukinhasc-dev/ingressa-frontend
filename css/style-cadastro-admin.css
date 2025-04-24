@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+body {
+    height: 100vh;
+}
+
+.esquerda-direita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.lado-esquerdo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lado-direito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, #FE8625 0%, #F85F1C 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px 0px 0px 50px;
+}
+
+.login-tittle {
+    font-size: 2.8rem;
+    text-align: center;
+    color: #C13B00;
+    font-family: 'Roboto';
+    font-size: 800;
+    font-weight: 800;
+}
+
+.login-text {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    text-align: justify;
+    height: 100%;
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 300;
+}
+
+
+/*Formulário e Inputs*/
+.forms-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+input[type="email"], input[type="password"], input[type="date"], input[type="text"], input[type="tel"] {
+    width: 40rem;
+    height: 4.3rem;
+    border-radius: 15px;
+    margin-top: 0.90rem;
+    border: 0;
+    outline: none;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+input::placeholder {
+    font-family: 'Roboto';
+    font-size: 1.3rem;
+    font-weight: 400;
+    outline: none;
+    opacity: 45%;
+}
+
+.forgot-password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    gap: 15px;
+    color: white;
+    margin-top: 0.80rem;
+    flex-direction: column;
+}
+
+input[type="submit"] {
+    width: 40rem; /* A largura do botão será 100% do formulário */
+    height: 4.3rem;
+    border-radius: 15px;
+    border: none;
+    background-color: #C13B00;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+input:focus {
+    border: 3px solid #C13B00;
+}
+
+.forgot-pass {
+    display: flex;
+    gap: 1rem;
+}
+
+.create-account {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 15px;
+    font-size: 1.3rem;
+    margin-top: 0.80rem;
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .lado-esquerdo {
+        width: 60%;
+    }
+
+    img {
+        width: 3rem;
+        scale: 9;
+    }
+
+    input[type="email"], input[type="password"], input[type="date"], input[type="text"], input[type="tel"]  {
+        width: 35rem;
+        height: 3.8rem;
+        font-size: 1.1rem;
+    }
+    
+    input[type="submit"] {
+        max-width: 35rem; /* Limita a largura do botão, se necessário */
+        height: 3.8rem;
+        font-size: 1.2rem;
+    }
+
+    input::placeholder {
+        font-size: 1rem;
+    }
+    
+    .login-tittle {
+        font-size: 2.5rem;
+    }
+
+    .login-text {
+        font-size: 1.2rem;
+    }
+    
+    .forgot-password {
+        font-size: 1.1rem;
+    }
+
+    .create-account {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .lado-esquerdo {
+        width: 50%;
+    }
+
+    img {
+        width: 3rem;
+        scale: 6.5;
+    }
+    input[type="email"], input[type="password"], input[type="date"], input[type="text"], input[type="tel"] {
+        width: 28rem;
+        height: 3.8rem;
+        font-size: 1.1rem;
+    }
+    
+    input[type="submit"] {
+        max-width: 28rem; /* Limita a largura do botão, se necessário */
+        height: 3.9rem;
+        font-size: 1.2rem;
+    }
+
+    input::placeholder {
+        font-size: 1.05rem;
+    }
+    
+    .login-tittle {
+        font-size: 2.1rem;
+    }
+
+    .login-text {
+        font-size: 1.05rem;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    
+    .forgot-password {
+        font-size: 1rem;
+    }
+
+    .create-account {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .esquerda-direita {
+        flex-direction: column;
+    }
+
+    .lado-esquerdo {
+        height: 25rem;
+        width: 100%;
+    }
+
+    .forms-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 3rem;
+        scale: 8;
+    }
+
+    .lado-direito {
+     border-radius: 15px 15px 0px 0px;
+     height: 100vh;
+    }
+
+    i {
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+
+    input[type="email"], input[type="password"], input[type="date"], input[type="text"], input[type="tel"] {
+        width: 23.3rem;
+        height: 3rem;
+        font-size: 1rem;
+        margin-top: 0.55rem;
+    }
+
+    input[type="submit"] {
+        max-width: 23.3rem;
+        height: 3rem;
+        margin-top: 0.90rem;
+        font-size: 1rem;
+    }
+
+    input::placeholder {
+        font-size: 0.90rem;
+    }
+
+    .login-tittle {
+        font-size: 1.5rem;
+    }
+
+    .login-text {
+        font-size: 1rem;
+        margin-top: 0.75rem;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .forgot-password {
+        font-size: 0.90rem;
+    }
+
+    .create-account {
+        font-size: 1rem;
+        gap: 1rem;
+    }
+
+    input:focus {
+        border: 2px solid #C13B00;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .esquerda-direita {
+        flex-direction: column;
+    }
+
+    .lado-esquerdo {
+        height: 15rem;
+        width: 100%;
+    }
+
+    .forms-login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img {
+        width: 4dvh;
+        scale: 7;
+    }
+
+    .lado-direito {
+     border-radius: 15px 15px 0px 0px;
+     height: 100vh;
+    }
+
+    input[type="email"], input[type="password"], input[type="date"], input[type="text"], input[type="tel"] {
+        width: 18.5rem;
+        height: 3rem;
+        font-size: 0.82rem;
+        margin-top: 0.45rem;
+    }
+
+    input[type="submit"] {
+        max-width: 18.5rem;
+        height: 3rem;
+        font-size: 0.90rem;
+        margin-top: 1.5rem;
+    }
+
+    input::placeholder {
+        font-size: 0.80rem;
+    }
+
+    .login-tittle {
+        font-size: 1.4rem;
+    }
+
+    .login-text {
+        font-size: 0.90rem;
+        margin-top: 0.20rem;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .forgot-password {
+        font-size: 0.80rem;
+    }
+
+    .create-account {
+        font-size: 0.80rem;
+        gap: 1rem;
+    }
+
+    input:focus {
+        border: 1.8px solid #C13B00;
+    }
+}
