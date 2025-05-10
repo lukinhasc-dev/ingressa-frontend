@@ -107,48 +107,76 @@ input[type="search"] {
 }
 
 /*INICIO DA TABELA*/
-.tabela-ingresso {
+.ingresso-informacoes {
     display: flex;
-    margin-top: 50px;
+    justify-content: flex-start;
+    flex-direction: column;
     margin-left: 136px;
-    padding-bottom: 7px;
-    font-size: 1.2rem;
-    font-weight: 400;
-    border-bottom: 2px solid rgb(235, 235, 235);
 }
 
-.teste-tabela {
+.ingresso-linha {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 160px;
+    border: 1px solid #F85F1C;
+    background-color: rgb(243, 243, 243);
+    width: 800px;
+    align-items: center;
+    gap: 55px;
 }
 
+.ingresso-informacoes img {
+    max-height: 160px;
+}
+
+.info-evento {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.info-evento strong {
+    font-size: 1.1rem;
+}
+
+.info-evento p {
+    font-size: 1rem;
+}
 /*FIM DA TABELA*/
 
 
 
 /*CARD DE PAGAMENTO NA DIREITA*/
 .pagamento-ingresso {
-    width: 100%;
-    height: 475px;
-    margin-top: 50px;
+    height: 340px;
     margin-right: 150px;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(243, 243, 243);
     border-radius: 18px;
     padding: 1.3rem;
+    border: 1px solid #F85F1C;
     text-align: center;
 }
 
+.tittle-icone {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.tittle-icone i {
+    font-size: 30px;
+    color: #F85F1C;
+}
+
 .title-carrinho {
-    font-size: 1.25rem;
+    font-size: 1.40rem;
+    color: black;
 }
 
 .options-valores {
     display: flex;
     margin-top: 50px;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .list-option {
@@ -157,18 +185,22 @@ input[type="search"] {
     font-size: 1.25rem;
 }
 
+.list-option strong {
+    color: #F85F1C;
+}
+
 .option-valores2 {
     display: flex;
     flex-direction: column;
     font-size: 1.25rem;
-    margin-top: 50px;
+    margin-top: 20px;
     border-top: 2px solid black;
-    padding-top: 10px;
+    padding-top: 20px;
     gap: 40px;
 }
 
 button[type="submit"] {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     outline: none;
     border: none;
     background-color: #F85F1C;
