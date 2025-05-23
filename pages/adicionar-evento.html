@@ -20,30 +20,11 @@
 
             <nav>
                 <ul>
-                    <li><a href="/pages/inicio.html">Início</a></li>
-                    <li><a href="/carrinho">Carrinho</a></li>
-                    <li><a href="/locais">Locais</a></li>
+                    <li><a href="/pages/inicio-admin.html">Painel</a></li>
+                    <li><a href="/pages/adicionar-evento.html">Adicionar Evento</a></li>
+                    <li><a href="/pages/sairconta-evento.html">Sair da Conta</a></li>
                 </ul>
             </nav>
-
-            <div class="header-actions">
-
-                <form action="/buscar" method="GET">
-                    <div class="search-bar">
-                        <i class="fas fa-search"></i>
-                        <input type="search" id="search" name="search" placeholder="Pesquisar eventos, shows..."
-                            required>
-                    </div>
-                </form>
-
-            </div>
-
-
-            <div class="profile-icon">
-                <a href="/pages/perfil.html"> <!-- Ajustei o link para algo mais relevante -->
-                    <i class="fas fa-user"></i> <!-- Ícone do perfil -->
-                </a>
-            </div>
         </header>
     </section>
 
@@ -54,28 +35,28 @@
                 valores do seu evento.</p>
         </div>
 
-        <form action="" id="events-forms" method="post">
+        <form action="http://localhost:8080/api/eventos" id="eventos" method="post" enctype="multipart/form-data">
             <div class="events-cadaster">
                 <div class="left-group">
                     <div class="form-group">
                         <label for="nome">Nome do Evento</label>
-                        <input type="text" id="nome" name="nome" maxlength="65" placeholder="Digite o título do evento"
+                        <input type="text" id="nome_evento" name="nome" maxlength="30" placeholder="Digite o título do evento"
                             required>
                     </div>
 
                     <div class="form-group">
                         <label for="horario">Horário do Evento</label>
-                        <input type="time" id="horario" name="horario" required>
+                        <input type="time" id="horario_evento" name="horario" required>
                     </div>
 
                     <div class="form-group">
                         <label for="data">Data do Evento</label>
-                        <input type="date" id="data" name="data" required>
+                        <input type="date" id="data_evento" name="data" required>
                     </div>
 
                     <div class="form-group">
                         <label for="preco">Preço do Evento</label>
-                        <input type="text" id="preco" name="preco" step="0.01" min="0"
+                        <input type="text" id="preco_evento" name="preco" step="0.01" min="0"
                             placeholder="Digite o preço do ingresso" required>
                     </div>
                 </div>
@@ -83,8 +64,8 @@
                 <div class="right-group">
                     <div class="form-group">
                         <label for="descricao">Descrição do Evento</label>
-                        <textarea id="descricao" name="descricao" placeholder="Escreva uma descrição sobre o evento"
-                            maxlength="300" rows="4" required></textarea>
+                        <textarea id="descricao_evento" name="descricao" placeholder="Escreva uma descrição sobre o evento"
+                            maxlength="255" rows="4" required></textarea>
                     </div>
                 </div>
             </div>
@@ -102,31 +83,31 @@
                 <div class="left-group">
                     <div class="form-group">
                         <label for="endereco">Rua</label>
-                        <input type="text" id="endereco" name="endereco" placeholder="Digite a localização do evento"
+                        <input type="text" id="rua_evento" name="endereco" placeholder="Digite a localização do evento"
                             required>
                     </div>
 
                     <div class="form-group">
                         <label for="cidade">Cidade</label>
-                        <input type="text" id="cidade" name="cidade" placeholder="Digite a cidade onde será o evento"
+                        <input type="text" id="cidade_evento" name="cidade" placeholder="Digite a cidade onde será o evento"
                             required>
                     </div>
 
                     <div class="form-group">
                         <label for="estado">Estado</label>
-                        <input type="text" id="estado" name="estado" placeholder="Digite o estado do evento" required>
+                        <input type="text" id="estado_evento" name="estado" placeholder="Digite o estado do evento" required maxlength="2">
                     </div>
 
                     <div class="form-group">
                         <label for="numero">Número do Local</label>
-                        <input type="number" id="numero" name="numero" placeholder="Número do local do evento" required>
+                        <input type="number" id="numero_evento" name="numero" placeholder="Número do local do evento" required>
                     </div>
                 </div>
 
                 <div class="right-group">
                     <div class="form-group">
                         <label for="foto">Banner ou Foto do Evento</label>
-                        <input type="file" id="foto" name="foto" accept="image/*" onchange="mostrarPreview(event)">
+                        <input type="file" id="foto_evento" name="foto" accept="image/*">
                     </div>
                 </div>
             </div>
@@ -223,7 +204,19 @@
     </section>
 
 
-    <script src="/scripts/cadastro.js"></script>
+    <script src="/static/scripts/adicionar-evento.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const usuarioLogado = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+        if (!usuarioLogado) {
+            window.location.href = "/pages/login.html";
+        } else {
+            const profileIcon = document.querySelector(".profile-icon a");
+            profileIcon.innerHTML = `<i class="fas fa-user"></i>`;
+        }
+    });
+</script>
 </body>
 
 </html>
