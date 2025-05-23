@@ -108,69 +108,72 @@ input[type="search"] {
 
 
 /*INICIO DOS CARDS DE SHOWS/EVENTOS */
-#cards {
+#cards-junction {
     display: flex;
     justify-content: flex-start;
+    gap: 40px;
     flex-wrap: wrap;
-    gap: 1.1rem;
     margin-left: 136px;
     margin-right: 120px;
-    position: absolute;
-    flex-grow: 3;
 }
 
-#cards-content {
-    padding: 15px;
-    border-radius: 10px;
-    width: 350px;
-    height: 630px;
-    background-color: #e2e2e258;
+#card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 375px;
+    height: 650px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    padding: 20px;
 }
 
-#cards-content img {
-    height: 320px;
-    width: 320px;
-    border-radius: 10px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.title-card {
-    color: #F85F1C;
-    font-size: 1.20rem;
-    font-weight: 600;
-}
-
-.description-card {
-    color: black;
-    font-size: 1.1rem;
-    margin-top: 0.30rem;
-    font-weight: 400;
+#card-evento {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     text-align: justify;
 }
 
-#cards .cards-information {
+#card-evento img {
+    width: 335px;
+    height: 335px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#card-evento-informacao {
     display: flex;
     justify-content: space-between;
-    align-items: end;
-    position: fixed;
-    top: 850px;
-    gap: 80px;
+    align-items: center;
 }
 
-.cards-dayweek {
-    color: #6A6A6A;
-    font-weight: 400;
-    font-size: 1.15rem;
-}
-
-.cards-date {
+/*PERSONALIZAÇÃO DO CARD*/
+#titulo-evento {
+    font-size: 18.5px;
     color: #F85F1C;
-    font-weight: 400;
-    font-size: 1.10rem;
+    margin-top: 10px;
 }
 
-.cards-ingresso button {
+#descricao-evento {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.dia-semana, .dia-mes, .hora-evento, span {
+    color: black;
+    font-size: 18px;
+}
+
+.dia-mes, .hora-evento, span {
+    color: #F85F1C;
+}
+
+.dia-semana {
+    color: #6A6A6A;
+}
+
+#btn-ingressos {
     color: white;
     background-color: #F85F1C;
     border: none;
@@ -181,3 +184,4 @@ input[type="search"] {
     width: 100px;
     cursor: pointer;
 }
+/*FIM DA PERSONALIZAÇÃO*/
